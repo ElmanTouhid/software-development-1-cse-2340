@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Basics</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            background-color: #f4f6f8;
+            color: #222;
+        }
+
+        .header {
+            background-color: #0e2842;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+
+            display: flex;
+            flex-direction: row;
+            justify-content:space-around;
+            align-items: center;
+
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: cyan;
+        }
+
+        nav {
+            display: flex;
+            gap: 50px;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1 id="main-title">Flex Basics</h1>
+        <nav>
+            <a href="w2_c3_css.html">CSS Basics</a>
+            <a href="w3_c1_flex.html">Flex Basics</a>
+        </nav>
+    </header>
+    <main>
+        <div class="card">
+            <h2>3AM</h2>
+            <p>Student number: 40</p>
+        </div>
+        <div class="card">
+            <h2>3DM</h2>
+            <p>Student number: 45</p>
+        </div>
+        <div class="card">
+            <h2>5AM</h2>
+            <p>Student number: 36</p>
+        </div>
+        <div class="card">
+            <h2>7CM</h2>
+            <p>Student number: 30</p>
+        </div>
+    </main>
+</body>
+
+</html>
