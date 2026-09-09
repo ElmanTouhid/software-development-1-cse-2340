@@ -1,0 +1,592 @@
+/*  
+   BASIC RESET
+     */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/*  
+   SIDEBAR
+     */
+
+.sidebar {
+    background: #111827;
+    color: white;
+
+    padding: 24px;
+
+    /* Mobile layout */
+    width: 100%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.sidebar nav {
+    display: flex;
+    gap: 8px;
+
+    /* Mobile */
+    flex-direction: column;
+}
+
+.sidebar a {
+    display: block;
+
+    padding: 12px 14px;
+
+    border-radius: 8px;
+
+    color: #cbd5e1;
+}
+
+
+/*  
+   PSEUDO-CLASS
+     */
+
+.sidebar a:hover {
+    background: #1f2937;
+    color: white;
+}
+
+
+/* Active navigation item */
+
+.sidebar a.active {
+    background: #374151;
+    color: white;
+}
+
+
+/*  
+   MAIN CONTENT
+     */
+
+.main-content {
+    padding: 24px;
+}
+
+
+/*  
+   TOP BAR
+     */
+
+.topbar {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.topbar h1 {
+    margin: 5px 0 0;
+    font-size: 28px;
+}
+
+.small-text {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile span {
+    display: block;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    background: #111827;
+    color: white;
+    font-weight: bold;
+}
+
+
+/*  
+   STATISTICS
+     */
+
+.stats {
+
+    display: grid;
+
+    /* Mobile: one column */
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+
+    margin-bottom: 35px;
+}
+
+.stat-card {
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+}
+
+.stat-label {
+    display: block;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+.stat-number {
+    display: block;
+
+    font-size: 32px;
+
+    margin: 8px 0;
+}
+
+.stat-info {
+    font-size: 13px;
+    color: #64748b;
+}
+
+
+/*  
+   SECTION HEADER
+     */
+
+.section-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+.section-header h2 {
+    margin: 0;
+}
+
+.view-all {
+    color: #2563eb;
+    font-size: 14px;
+}
+
+
+/*  
+   COURSE GRID
+     */
+
+.course-grid {
+
+    display: grid;
+
+    /* Mobile */
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+}
+
+
+/*  
+   COURSE CARD
+     */
+
+.course-card {
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    display: grid;
+
+    grid-template-columns: 60px 1fr;
+
+    gap: 16px;
+
+    transition: transform 0.2s;
+}
+
+
+/* Pseudo-class */
+
+.course-card:hover {
+    transform: translateY(-3px);
+}
+
+
+/*  
+   COURSE ICON
+     */
+
+.course-icon {
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 12px;
+
+    display: grid;
+    place-items: center;
+
+    font-weight: bold;
+
+    color: white;
+}
+
+.html {
+    background: #e44d26;
+}
+
+.data {
+    background: #2563eb;
+}
+
+.ai {
+    background: #7c3aed;
+}
+
+.software {
+    background: #059669;
+}
+
+
+/*  
+   COURSE CONTENT
+     */
+
+.course-category {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.course-content h3 {
+    margin: 5px 0;
+
+    font-size: 18px;
+}
+
+.course-content p {
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/*  
+   PROGRESS
+     */
+
+.progress-info {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 13px;
+
+    margin-top: 18px;
+}
+
+.progress-bar {
+
+    height: 7px;
+
+    background: #e5e7eb;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    margin: 7px 0 15px;
+}
+
+.progress {
+
+    height: 100%;
+
+    background: #2563eb;
+}
+
+
+/*  
+   BUTTON
+     */
+
+.course-button {
+
+    border: none;
+
+    padding: 10px 14px;
+
+    border-radius: 7px;
+
+    background: #111827;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 13px;
+}
+
+
+/* Pseudo-class */
+
+.course-button:hover {
+
+    background: #2563eb;
+
+}
+
+
+/* Keyboard focus */
+
+.course-button:focus-visible {
+
+    outline: 3px solid #93c5fd;
+
+    outline-offset: 2px;
+
+}
+
+
+/*  
+   BOTTOM GRID
+     */
+
+.bottom-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    margin-top: 25px;
+}
+
+.panel {
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    padding: 20px;
+}
+
+.panel .section-header {
+    margin-bottom: 10px;
+}
+
+.panel .section-header h2 {
+    font-size: 18px;
+}
+
+.panel .section-header a {
+    color: #2563eb;
+    font-size: 13px;
+}
+
+
+/*  
+   TASKS
+     */
+
+.task {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.task:last-child {
+    border-bottom: none;
+}
+
+.task span {
+
+    display: block;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    margin-top: 4px;
+}
+
+.task time {
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/*  
+   ACTIVITY
+     */
+
+.activity {
+
+    padding: 12px 0;
+
+    margin: 0;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    color: #475569;
+}
+
+
+/*  
+   RESPONSIVE DESIGN
+     */
+
+/*  
+   TABLET
+     */
+
+@media (min-width: 768px) {
+
+    .stats {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+    .course-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+    .bottom-grid {
+
+        grid-template-columns:
+            2fr 1fr;
+
+    }
+
+}
+
+
+/*  
+   DESKTOP
+     */
+
+@media (min-width: 1100px) {
+
+    body {
+
+        display: grid;
+
+        grid-template-columns: 240px 1fr;
+
+        min-height: 100vh;
+
+    }
+
+    .sidebar {
+
+        width: 240px;
+
+        min-height: 100vh;
+
+        position: sticky;
+
+        top: 0;
+    }
+
+    .sidebar nav {
+
+        gap: 5px;
+
+    }
+
+    .main-content {
+
+        padding: 35px 45px;
+
+    }
+
+    .course-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/*  
+   LARGE DESKTOP
+     */
+
+@media (min-width: 1400px) {
+
+    .course-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+    .main-content {
+
+        max-width: 1500px;
+
+    }
+
+}
