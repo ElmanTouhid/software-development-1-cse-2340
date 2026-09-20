@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduSpace - Student Dashboard</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body id="dashboard-page"
+    class="m-0 bg-[#f5f7fb] font-[Arial,sans-serif] text-[#1f2937] min-[1100px]:grid min-[1100px]:min-h-screen min-[1100px]:grid-cols-[240px_1fr]">
+
+    <aside id="sidebar"
+        class="sidebar w-full bg-[#111827] p-6 text-white min-[1100px]:sticky min-[1100px]:top-0 min-[1100px]:min-h-screen min-[1100px]:w-[240px]">
+
+        <div id="site-logo" class="logo mb-[30px] text-2xl font-bold">
+            EduSpace
+        </div>
+
+        <nav id="main-navigation"
+            class="sidebar-nav flex flex-col gap-2 min-[1100px]:gap-[5px]"
+            aria-label="Main navigation">
+
+            <a href="#dashboard-page"
+                class="nav-link active block rounded-lg bg-[#374151] px-[14px] py-3 text-white">
+                Dashboard
+            </a>
+
+            <a href="#courses-section"
+                class="nav-link block rounded-lg px-[14px] py-3 text-[#cbd5e1] hover:bg-[#1f2937] hover:text-white">
+                My Courses
+            </a>
+
+            <a href="#upcoming-tasks"
+                class="nav-link block rounded-lg px-[14px] py-3 text-[#cbd5e1] hover:bg-[#1f2937] hover:text-white">
+                Assignments
+            </a>
+
+            <a href="#statistics-section"
+                class="nav-link block rounded-lg px-[14px] py-3 text-[#cbd5e1] hover:bg-[#1f2937] hover:text-white">
+                Results
+            </a>
+
+            <a href="#upcoming-tasks"
+                class="nav-link block rounded-lg px-[14px] py-3 text-[#cbd5e1] hover:bg-[#1f2937] hover:text-white">
+                Calendar
+            </a>
+
+        </nav>
+
+        <div id="sidebar-bottom" class="sidebar-bottom mt-8 flex flex-col gap-2">
+
+            <a href="#" class="sidebar-link block rounded-lg px-[14px] py-3 text-[#cbd5e1] hover:bg-[#1f2937] hover:text-white">
+                Settings
+            </a>
+
+            <a href="#" class="sidebar-link block rounded-lg px-[14px] py-3 text-[#cbd5e1] hover:bg-[#1f2937] hover:text-white">
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <main id="main-content" class="main-content p-6 min-[1100px]:px-[45px] min-[1100px]:py-[35px] min-[1400px]:max-w-[1500px]">
+
+        <header id="topbar" class="topbar mb-[30px] flex items-center justify-between gap-4">
+
+            <div id="welcome-section" class="welcome-section">
+
+                <p class="small-text m-0 text-sm text-[#64748b]">
+                    Student Dashboard
+                </p>
+
+                <h1 id="welcome-heading" class="mt-[5px] mb-0 text-[28px] font-bold">
+                    Good morning, Mahir
+                </h1>
+
+            </div>
+
+            <div id="student-profile" class="profile flex items-center gap-[10px]">
+
+                <div id="profile-avatar"
+                    class="avatar grid h-[42px] w-[42px] place-items-center rounded-full bg-[#111827] font-bold text-white">
+                    M
+                </div>
+
+                <div class="profile-details">
+
+                    <strong class="profile-name">
+                        Mahir
+                    </strong>
+
+                    <span class="profile-role block text-[13px] text-[#64748b]">
+                        CSE Student
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section id="statistics-section" class="stats mb-[35px] grid grid-cols-1 gap-4 md:grid-cols-3">
+
+            <article id="stat-enrolled-courses"
+                class="stat-card rounded-xl border border-[#e5e7eb] bg-white p-[22px]">
+
+                <span class="stat-label block text-sm text-[#64748b]">
+                    Enrolled Courses
+                </span>
+
+                <strong class="stat-number my-2 block text-[32px]">
+                    06
+                </strong>
+
+                <span class="stat-info text-[13px] text-[#64748b]">
+                    This semester
+                </span>
+
+            </article>
+
+
+            <article id="stat-average-progress"
+                class="stat-card rounded-xl border border-[#e5e7eb] bg-white p-[22px]">
+
+                <span class="stat-label block text-sm text-[#64748b]">
+                    Average Progress
+                </span>
+
+                <strong class="stat-number my-2 block text-[32px]">
+                    78%
+                </strong>
+
+                <span class="stat-info text-[13px] text-[#64748b]">
+                    +8% this month
+                </span>
+
+            </article>
+
+
+            <article id="stat-pending-tasks"
+                class="stat-card rounded-xl border border-[#e5e7eb] bg-white p-[22px]">
+
+                <span class="stat-label block text-sm text-[#64748b]">
+                    Pending Tasks
+                </span>
+
+                <strong class="stat-number my-2 block text-[32px]">
+                    03
+                </strong>
+
+                <span class="stat-info text-[13px] text-[#64748b]">
+                    Need attention
+                </span>
+
+            </article>
+
+        </section>
+
+
+        <section id="courses-section" class="courses-section">
+
+            <div id="courses-header" class="section-header mb-[18px] flex items-center justify-between">
+
+                <div class="section-title">
+
+                    <p class="small-text m-0 text-sm text-[#64748b]">
+                        Your learning
+                    </p>
+
+                    <h2 class="m-0 text-2xl font-bold">
+                        My Courses
+                    </h2>
+
+                </div>
+
+                <a href="#" id="view-all-courses"
+                    class="view-all text-sm text-[#2563eb] hover:underline">
+                    View all
+                </a>
+
+            </div>
+
+
+            <div id="course-grid" class="course-grid grid grid-cols-1 gap-5 md:grid-cols-2">
+
+
+                <article id="course-web-development"
+                    class="course-card grid grid-cols-[60px_1fr] gap-4 rounded-[14px] border border-[#e5e7eb] bg-white p-5 transition-transform duration-200 hover:-translate-y-[3px]">
+
+                    <div class="course-icon html grid h-[60px] w-[60px] place-items-center rounded-xl bg-[#e44d26] font-bold text-white">
+                        WD
+                    </div>
+
+                    <div class="course-content">
+
+                        <span class="course-category text-xs text-[#64748b]">
+                            Development
+                        </span>
+
+                        <h3 class="my-[5px] text-lg font-bold">
+                            Web Development
+                        </h3>
+
+                        <p class="text-sm leading-[1.5] text-[#64748b]">
+                            HTML, CSS, responsive layouts and modern
+                            frontend development.
+                        </p>
+
+                        <div class="progress-info mt-[18px] flex justify-between text-[13px]">
+
+                            <span>Progress</span>
+
+                            <strong>82%</strong>
+
+                        </div>
+
+                        <div class="progress-bar my-[7px] h-[7px] overflow-hidden rounded-[10px] bg-[#e5e7eb]">
+
+                            <div class="progress h-full w-[82%] bg-[#2563eb]"></div>
+
+                        </div>
+
+                        <button id="continue-web-development"
+                            class="course-button mt-[15px] w-full cursor-pointer rounded-[7px] border-0 bg-[#111827] px-[14px] py-[10px] text-[13px] text-white hover:bg-[#2563eb] focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-[#93c5fd]">
+
+                            Continue Learning
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article id="course-data-mining"
+                    class="course-card grid grid-cols-[60px_1fr] gap-4 rounded-[14px] border border-[#e5e7eb] bg-white p-5 transition-transform duration-200 hover:-translate-y-[3px]">
+
+                    <div class="course-icon data grid h-[60px] w-[60px] place-items-center rounded-xl bg-[#2563eb] font-bold text-white">
+                        DM
+                    </div>
+
+                    <div class="course-content">
+
+                        <span class="course-category text-xs text-[#64748b]">
+                            Data Science
+                        </span>
+
+                        <h3 class="my-[5px] text-lg font-bold">
+                            Data Mining
+                        </h3>
+
+                        <p class="text-sm leading-[1.5] text-[#64748b]">
+                            Discover patterns and extract useful
+                            knowledge from data.
+                        </p>
+
+                        <div class="progress-info mt-[18px] flex justify-between text-[13px]">
+
+                            <span>Progress</span>
+
+                            <strong>68%</strong>
+
+                        </div>
+
+                        <div class="progress-bar my-[7px] h-[7px] overflow-hidden rounded-[10px] bg-[#e5e7eb]">
+
+                            <div class="progress h-full w-[68%] bg-[#2563eb]"></div>
+
+                        </div>
+
+                        <button id="continue-data-mining"
+                            class="course-button mt-[15px] w-full cursor-pointer rounded-[7px] border-0 bg-[#111827] px-[14px] py-[10px] text-[13px] text-white hover:bg-[#2563eb] focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-[#93c5fd]">
+
+                            Continue Learning
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article id="course-machine-learning"
+                    class="course-card grid grid-cols-[60px_1fr] gap-4 rounded-[14px] border border-[#e5e7eb] bg-white p-5 transition-transform duration-200 hover:-translate-y-[3px]">
+
+                    <div class="course-icon ai grid h-[60px] w-[60px] place-items-center rounded-xl bg-[#7c3aed] font-bold text-white">
+                        AI
+                    </div>
+
+                    <div class="course-content">
+
+                        <span class="course-category text-xs text-[#64748b]">
+                            Artificial Intelligence
+                        </span>
+
+                        <h3 class="my-[5px] text-lg font-bold">
+                            Machine Learning
+                        </h3>
+
+                        <p class="text-sm leading-[1.5] text-[#64748b]">
+                            Learn supervised learning and intelligent
+                            prediction systems.
+                        </p>
+
+                        <div class="progress-info mt-[18px] flex justify-between text-[13px]">
+
+                            <span>Progress</span>
+
+                            <strong>54%</strong>
+
+                        </div>
+
+                        <div class="progress-bar my-[7px] h-[7px] overflow-hidden rounded-[10px] bg-[#e5e7eb]">
+
+                            <div class="progress h-full w-[54%] bg-[#2563eb]"></div>
+
+                        </div>
+
+                        <button id="continue-machine-learning"
+                            class="course-button mt-[15px] w-full cursor-pointer rounded-[7px] border-0 bg-[#111827] px-[14px] py-[10px] text-[13px] text-white hover:bg-[#2563eb] focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-[#93c5fd]">
+
+                            Continue Learning
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article id="course-software-engineering"
+                    class="course-card grid grid-cols-[60px_1fr] gap-4 rounded-[14px] border border-[#e5e7eb] bg-white p-5 transition-transform duration-200 hover:-translate-y-[3px]">
+
+                    <div class="course-icon software grid h-[60px] w-[60px] place-items-center rounded-xl bg-[#059669] font-bold text-white">
+                        SE
+                    </div>
+
+                    <div class="course-content">
+
+                        <span class="course-category text-xs text-[#64748b]">
+                            Software
+                        </span>
+
+                        <h3 class="my-[5px] text-lg font-bold">
+                            Software Engineering
+                        </h3>
+
+                        <p class="text-sm leading-[1.5] text-[#64748b]">
+                            Software development processes, testing
+                            and project management.
+                        </p>
+
+                        <div class="progress-info mt-[18px] flex justify-between text-[13px]">
+
+                            <span>Progress</span>
+
+                            <strong>91%</strong>
+
+                        </div>
+
+                        <div class="progress-bar my-[7px] h-[7px] overflow-hidden rounded-[10px] bg-[#e5e7eb]">
+
+                            <div class="progress h-full w-[91%] bg-[#2563eb]"></div>
+
+                        </div>
+
+                        <button id="continue-software-engineering"
+                            class="course-button mt-[15px] w-full cursor-pointer rounded-[7px] border-0 bg-[#111827] px-[14px] py-[10px] text-[13px] text-white hover:bg-[#2563eb] focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-[#93c5fd]">
+
+                            Continue Learning
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <section id="bottom-grid" class="bottom-grid mt-[25px] grid grid-cols-1 gap-5 md:grid-cols-[2fr_1fr]">
+
+
+            <article id="upcoming-tasks"
+                class="tasks-panel rounded-[14px] border border-[#e5e7eb] bg-white p-5">
+
+                <div id="tasks-header" class="section-header mb-[10px] flex items-center justify-between">
+
+                    <h2 class="text-lg font-bold">
+                        Upcoming Tasks
+                    </h2>
+
+                    <a href="#" id="view-all-tasks"
+                        class="text-[13px] text-[#2563eb] hover:underline">
+                        View all
+                    </a>
+
+                </div>
+
+
+                <div id="task-css-assignment"
+                    class="task flex items-center justify-between gap-3 border-b border-[#e5e7eb] py-[15px]">
+
+                    <div class="task-details">
+
+                        <strong>CSS Assignment</strong>
+
+                        <span class="mt-1 block text-[13px] text-[#64748b]">
+                            Web Development
+                        </span>
+
+                    </div>
+
+                    <time class="task-date text-[13px] text-[#64748b]">
+                        Tomorrow
+                    </time>
+
+                </div>
+
+
+                <div id="task-data-mining-quiz"
+                    class="task flex items-center justify-between gap-3 border-b border-[#e5e7eb] py-[15px]">
+
+                    <div class="task-details">
+
+                        <strong>Data Mining Quiz</strong>
+
+                        <span class="mt-1 block text-[13px] text-[#64748b]">
+                            Data Mining
+                        </span>
+
+                    </div>
+
+                    <time class="task-date text-[13px] text-[#64748b]">
+                        Sep 12
+                    </time>
+
+                </div>
+
+
+                <div id="task-project-submission"
+                    class="task flex items-center justify-between gap-3 py-[15px]">
+
+                    <div class="task-details">
+
+                        <strong>Project Submission</strong>
+
+                        <span class="mt-1 block text-[13px] text-[#64748b]">
+                            Software Engineering
+                        </span>
+
+                    </div>
+
+                    <time class="task-date text-[13px] text-[#64748b]">
+                        Sep 15
+                    </time>
+
+                </div>
+
+            </article>
+
+
+            <article id="recent-activity"
+                class="activity-panel rounded-[14px] border border-[#e5e7eb] bg-white p-5">
+
+                <div id="activity-header" class="section-header mb-[10px]">
+
+                    <h2 class="text-lg font-bold">
+                        Recent Activity
+                    </h2>
+
+                </div>
+
+                <p id="activity-css-grid"
+                    class="activity m-0 border-b border-[#e5e7eb] py-3 text-[#475569]">
+                    Completed CSS Grid lesson
+                </p>
+
+                <p id="activity-web-assignment"
+                    class="activity m-0 border-b border-[#e5e7eb] py-3 text-[#475569]">
+                    Submitted Web Development assignment
+                </p>
+
+                <p id="activity-data-mining"
+                    class="activity m-0 py-3 text-[#475569]">
+                    Completed Data Mining quiz
+                </p>
+
+            </article>
+
+
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>
